@@ -18,9 +18,9 @@ class SeriesMatematicas(Scene):
             Séries Matemáticas \\
             """,
                 font_size=48,
-            ).set_color_by_gradient(BLUE, GREEN, YELLOW, ORANGE, RED),
+            ).set_color_by_gradient(WHITE, BLUE),
             MathTex(r"\sum_{n=1}^{\infty} a_n").set_color_by_gradient(
-                BLUE, GREEN, YELLOW, ORANGE, RED
+                WHITE, BLUE
             ),
         ).arrange(DOWN, buff=0.35)
 
@@ -35,9 +35,9 @@ class SeriesMatematicas(Scene):
             Dada uma sequência de números \\
             reais $(a_n)$
             """
-            ).set_color_by_gradient(BLUE, GREEN, YELLOW, ORANGE, RED),
+            ).set_color_by_gradient(WHITE, BLUE),
             MathTex(r"(a_n) = a_1, a_2, a_3, \ldots, a_n").set_color_by_gradient(
-                BLUE, GREEN, YELLOW, ORANGE, RED
+                WHITE, BLUE
             ),
         ).arrange(DOWN, buff=0.35)
 
@@ -52,19 +52,19 @@ class SeriesMatematicas(Scene):
             A partir dela formamos uma nova \\
             sequência $(S_n)$ onde
             """
-            ).set_color_by_gradient(BLUE, GREEN, YELLOW, ORANGE, RED),
+            ).set_color_by_gradient(WHITE, BLUE),
             VGroup(
                 MathTex(r"S_1 = a_1").set_color_by_gradient(
-                    BLUE, GREEN, YELLOW, ORANGE, RED
+                    WHITE, BLUE
                 ),
                 MathTex(r"S_2 = a_1 + a_2").set_color_by_gradient(
-                    BLUE, GREEN, YELLOW, ORANGE, RED
+                    WHITE, BLUE
                 ),
                 MathTex(r"\vdots").set_color_by_gradient(
-                    BLUE, GREEN, YELLOW, ORANGE, RED
+                    WHITE, BLUE
                 ),
                 MathTex(r"S_n = \sum_{i=1}^n a_i").set_color_by_gradient(
-                    BLUE, GREEN, YELLOW, ORANGE, RED
+                    WHITE, BLUE
                 ),
             ).arrange(DOWN, buff=0.35),
         ).arrange(DOWN, buff=1)
@@ -80,13 +80,13 @@ class SeriesMatematicas(Scene):
                 Os números $S_n$ são chamados de \\
                 \textbf{somas parciais} da série $\sum a_n$
                 """
-            ).set_color_by_gradient(BLUE, GREEN, YELLOW, ORANGE, RED),
+            ).set_color_by_gradient(WHITE, BLUE),
             Tex(
                 r"""
                 A parcela $a_n$ é o n-ésimo termo \\
                 ou termo geral da série.
                 """
-            ).set_color_by_gradient(BLUE, GREEN, YELLOW, ORANGE, RED),
+            ).set_color_by_gradient(WHITE, BLUE),
         ).arrange(DOWN, buff=0.35)
 
         self.play(Write(texto3), run_time=4)
