@@ -3,9 +3,9 @@ from manim import *
 # Formato vertical 9:16, ideal para Reels do Instagram.
 config.frame_width = 16
 config.frame_height = 9
-config.pixel_width = 854
-config.pixel_height = 480
-config.frame_rate = 24
+config.pixel_width = 1920
+config.pixel_height = 1080
+config.frame_rate = 60
 
 
 class EspacosVetoriais(Scene):
