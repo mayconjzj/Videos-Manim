@@ -84,7 +84,7 @@ class SeriesMatematicas(Scene):
         texto4 = VGroup(
             Tex(
                 r"""
-                Se exister o limite $\lim_{n \to \infty} S_n$, \\
+                Se existir o limite $\lim_{n \to \infty} S_n$, \\
                 diremos que a série $\sum a_n$ é \\
                 \textbf{convergente} e \\
                 $S = \sum a_n = \sum_{n = 1}^{\infty} a_n = a_1 + a_2 + $\\
