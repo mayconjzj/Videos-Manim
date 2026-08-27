@@ -180,9 +180,11 @@ class EspacosVetoriais(Scene):
 
         exemplo1 = Tex(
             r"""
-            Exemplo 1:
+            Exemplo 1
             """,
             font_size=38,
         )
 
         self.play(Write(exemplo1))
+        self.wait(2)
+        self.play(FadeOut(exemplo1))
