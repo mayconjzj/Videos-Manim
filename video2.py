@@ -17,7 +17,7 @@ class EspacosVetoriais(Scene):
                 r"""
                 Espaços Vetoriais \\
                 """,
-                font_size=36,
+                font_size=38,
             )
         ).arrange(DOWN, buff=0.35)
 
@@ -31,7 +31,7 @@ class EspacosVetoriais(Scene):
                 r"""
                  Um espaço vetorial é um conjunto não vazio $V$, munido de uma operação de adição $+\colon V \times V \longrightarrow V$ e de uma multiplicação por escalares $\cdot \colon K \times V \longrightarrow V$, satisfazendo os axiomas de espaço vetorial.
                 """,
-                font_size=28,
+                font_size=30,
             )
         ).arrange(DOWN, buff=0.35)
 
@@ -44,27 +44,27 @@ class EspacosVetoriais(Scene):
             r"""
             Propriedades de um espaço vetorial:
             """,
-            font_size=36,
+            font_size=38,
         )
         definicao2 = Tex(
             r"""
             Seja $V$ um espaço vetorial sobre um corpo $K$. Então, para quaisquer vetores $u, v, w \in V$ e quaisquer escalares $\alpha, \beta \in K$, as seguintes propriedades são satisfeitas:
             """,
-            font_size=28,
+            font_size=30,
         )
 
         propriedade1 = Tex(
             r"""
             1. (Comutatividade da adição) $u + v = v + u$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade2 = Tex(
             r"""
             2. (Associatividade da adição) $(u + v) + w = u + (v + w)$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade3 = Tex(
@@ -72,7 +72,7 @@ class EspacosVetoriais(Scene):
             3. (Elemento neutro da adição) Existe um vetor $0 \in V$ \\
             tal que $u + 0 = u$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade4 = Tex(
@@ -80,7 +80,7 @@ class EspacosVetoriais(Scene):
             4. (Elemento inverso da adição) Para cada vetor $u \in V$, \\
             existe um vetor $-u \in V$ tal que $u + (-u) = 0$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade5 = Tex(
@@ -88,7 +88,7 @@ class EspacosVetoriais(Scene):
             5. (Distributividade do produto por escalar em relação à \\
             adição de vetores) $\alpha(u + v) = \alpha u + \alpha v$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade6 = Tex(
@@ -96,21 +96,21 @@ class EspacosVetoriais(Scene):
             6. (Distributividade do produto por escalar em relação à \\
             adição de escalares) \\ $(\alpha + \beta)u = \alpha u + \beta u$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade7 = Tex(
             r"""
             7. (Associatividade do produto por escalar) $\alpha(\beta u) = (\alpha \beta)u$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedade8 = Tex(
             r"""
             8. (Elemento neutro do produto por escalar) $1u = u$
             """,
-            font_size=24,
+            font_size=26,
         )
 
         propriedadesTitulo.move_to(UP * 2)
@@ -182,7 +182,7 @@ class EspacosVetoriais(Scene):
             r"""
             Exemplo 1:
             """,
-            font_size=36,
+            font_size=38,
         )
 
         self.play(Write(exemplo1))
