@@ -3,9 +3,9 @@ from manim import *
 # Formato vertical 9:16, ideal para Reels do Instagram.
 config.frame_width = 16
 config.frame_height = 9
-config.pixel_width = 1920
-config.pixel_height = 1080
-config.frame_rate = 60
+config.pixel_width = 854
+config.pixel_height = 480
+config.frame_rate = 24
 
 
 class EspacosVetoriais(Scene):
@@ -24,19 +24,21 @@ class EspacosVetoriais(Scene):
         self.play(Write(titulo), run_time=2)
         self.wait(8)
         self.play(FadeOut(titulo))
+        self.wait(1)
 
         definicao = VGroup(
             Tex(
                 r"""
-                 Um espaço vetorial é um conjunto não vazio $V$, munido de uma operação de adição $V \times V \longrightarrow V$ e de uma multiplicação por escalares $K \times V \longrightarrow V$, satisfazendo os axiomas de espaço vetorial.
+                 Um espaço vetorial é um conjunto não vazio $V$, munido de uma operação de adição $+\colon V \times V \longrightarrow V$ e de uma multiplicação por escalares $\cdot \colon K \times V \longrightarrow V$, satisfazendo os axiomas de espaço vetorial.
                 """,
                 font_size=28,
             )
         ).arrange(DOWN, buff=0.35)
 
-        self.play(Write(definicao), run_time=3)
+        self.play(Write(definicao), run_time=5)
         self.wait(10)
         self.play(FadeOut(definicao))
+        self.wait(1)
 
         propriedadesTitulo = Tex(
             r"""
@@ -159,4 +161,28 @@ class EspacosVetoriais(Scene):
         propriedade8.next_to(propriedade7, DOWN, buff=0.35).align_to(propriedade5, LEFT)
 
         self.play(Write(propriedade8))
-        self.wait(5)
+        self.wait(10)
+
+        self.play(
+            FadeOut(propriedadesTitulo),
+            FadeOut(definicao2),
+            FadeOut(propriedade1),
+            FadeOut(propriedade2),
+            FadeOut(propriedade3),
+            FadeOut(propriedade4),
+            FadeOut(propriedade5),
+            FadeOut(propriedade6),
+            FadeOut(propriedade7),
+            FadeOut(propriedade8),
+        )
+
+        self.wait(1)
+
+        exemplo1 = Tex(
+            r"""
+            Exemplo 1:
+            """,
+            font_size=36,
+        )
+
+        self.play(Write(exemplo1))
