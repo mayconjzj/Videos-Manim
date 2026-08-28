@@ -193,11 +193,13 @@ class EspacosVetoriais(Scene):
             r"""
             O conjunto $\mathbb{C}^2$ é um espaço vetorial sobre $\mathbb{R}$. Basta definirmos as operações:
             """,
-            font_size=30,
+            font_size=32,
         )
 
+        exemplo1.move_to(UP * 1)
+
         self.play(Write(exemplo1), run_time=3)
-        self.wait(2)
+        self.wait(5)
 
         exemplo1Adicao = Tex(
             r"""
@@ -209,7 +211,7 @@ class EspacosVetoriais(Scene):
         exemplo1Adicao.next_to(exemplo1, DOWN, buff=0.35)
 
         self.play(Write(exemplo1Adicao), run_time=3)
-        self.wait(2)
+        self.wait(3)
 
         exemplo1Produto = Tex(
             r"""
@@ -223,6 +225,6 @@ class EspacosVetoriais(Scene):
         )
 
         self.play(Write(exemplo1Produto), run_time=3)
-        self.wait(2)
+        self.wait(10)
 
         self.play(FadeOut(exemplo1), FadeOut(exemplo1Adicao), FadeOut(exemplo1Produto))
