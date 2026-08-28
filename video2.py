@@ -113,7 +113,7 @@ class EspacosVetoriais(Scene):
             font_size=26,
         )
 
-        propriedadesTitulo.move_to(UP * 2)
+        propriedadesTitulo.move_to(UP * 2.3)
 
         definicao2.next_to(propriedadesTitulo, DOWN, buff=0.35)
 
@@ -178,13 +178,51 @@ class EspacosVetoriais(Scene):
 
         self.wait(1)
 
-        exemplo1 = Tex(
+        exemplo1Titulo = Tex(
             r"""
             Exemplo 1
             """,
             font_size=38,
         )
 
-        self.play(Write(exemplo1))
+        self.play(Write(exemplo1Titulo))
         self.wait(2)
-        self.play(FadeOut(exemplo1))
+        self.play(FadeOut(exemplo1Titulo))
+
+        exemplo1 = Tex(
+            r"""
+            O conjunto $\mathbb{C}^2$ é um espaço vetorial sobre $\mathbb{R}$. Basta definirmos as operações:
+            """,
+            font_size=30,
+        )
+
+        self.play(Write(exemplo1), run_time=3)
+        self.wait(2)
+
+        exemplo1Adicao = Tex(
+            r"""
+            $\bullet\quad (a, b) + (c, d) = (a + c, \, b + d) \in \mathbb{C}^2, \, \forall \, (a, b), \, (c, d) \in \mathbb{C}^2$.
+            """,
+            font_size=30,
+        )
+
+        exemplo1Adicao.next_to(exemplo1, DOWN, buff=0.35)
+
+        self.play(Write(exemplo1Adicao), run_time=3)
+        self.wait(2)
+
+        exemplo1Produto = Tex(
+            r"""
+            $\bullet\quad \alpha\cdot (a, b) = (\alpha a, \alpha b), \, \alpha \in \mathbb{R}$ e $(a, b) \in \mathbb{C}^2$.
+            """,
+            font_size=30,
+        )
+
+        exemplo1Produto.next_to(exemplo1Adicao, DOWN, buff=0.35).align_to(
+            exemplo1Adicao, LEFT
+        )
+
+        self.play(Write(exemplo1Produto), run_time=3)
+        self.wait(2)
+
+        self.play(FadeOut(exemplo1), FadeOut(exemplo1Adicao), FadeOut(exemplo1Produto))
