@@ -1,0 +1,230 @@
+from manim import *
+
+# Formato vertical 9:16, ideal para Reels do Instagram.
+config.frame_width = 16
+config.frame_height = 9
+config.pixel_width = 1920
+config.pixel_height = 1080
+config.frame_rate = 60
+
+
+class EspacosVetoriais(Scene):
+    def construct(self):
+
+        # SEÇÃO 1: Título com definição geral de série
+        titulo = VGroup(
+            Tex(
+                r"""
+                Espaços Vetoriais \\
+                """,
+                font_size=38,
+            )
+        ).arrange(DOWN, buff=0.35)
+
+        self.play(Write(titulo), run_time=2)
+        self.wait(8)
+        self.play(FadeOut(titulo))
+        self.wait(1)
+
+        definicao = VGroup(
+            Tex(
+                r"""
+                 Um espaço vetorial é um conjunto não vazio $V$, munido de uma operação de adição $+\colon V \times V \longrightarrow V$ e de uma multiplicação por escalares $\cdot \colon K \times V \longrightarrow V$, satisfazendo os axiomas de espaço vetorial.
+                """,
+                font_size=30,
+            )
+        ).arrange(DOWN, buff=0.35)
+
+        self.play(Write(definicao), run_time=5)
+        self.wait(10)
+        self.play(FadeOut(definicao))
+        self.wait(1)
+
+        propriedadesTitulo = Tex(
+            r"""
+            Propriedades de um espaço vetorial:
+            """,
+            font_size=38,
+        )
+        definicao2 = Tex(
+            r"""
+            Seja $V$ um espaço vetorial sobre um corpo $K$. Então, para quaisquer vetores $u, v, w \in V$ e quaisquer escalares $\alpha, \beta \in K$, as seguintes propriedades são satisfeitas:
+            """,
+            font_size=30,
+        )
+
+        propriedade1 = Tex(
+            r"""
+            1. (Comutatividade da adição) $u + v = v + u$
+            """,
+            font_size=26,
+        )
+
+        propriedade2 = Tex(
+            r"""
+            2. (Associatividade da adição) $(u + v) + w = u + (v + w)$
+            """,
+            font_size=26,
+        )
+
+        propriedade3 = Tex(
+            r"""
+            3. (Elemento neutro da adição) Existe um vetor $0 \in V$ \\
+            tal que $u + 0 = u$
+            """,
+            font_size=26,
+        )
+
+        propriedade4 = Tex(
+            r"""
+            4. (Elemento inverso da adição) Para cada vetor $u \in V$, \\
+            existe um vetor $-u \in V$ tal que $u + (-u) = 0$
+            """,
+            font_size=26,
+        )
+
+        propriedade5 = Tex(
+            r"""
+            5. (Distributividade do produto por escalar em relação à \\
+            adição de vetores) $\alpha(u + v) = \alpha u + \alpha v$
+            """,
+            font_size=26,
+        )
+
+        propriedade6 = Tex(
+            r"""
+            6. (Distributividade do produto por escalar em relação à \\
+            adição de escalares) \\ $(\alpha + \beta)u = \alpha u + \beta u$
+            """,
+            font_size=26,
+        )
+
+        propriedade7 = Tex(
+            r"""
+            7. (Associatividade do produto por escalar) $\alpha(\beta u) = (\alpha \beta)u$
+            """,
+            font_size=26,
+        )
+
+        propriedade8 = Tex(
+            r"""
+            8. (Elemento neutro do produto por escalar) $1u = u$
+            """,
+            font_size=26,
+        )
+
+        propriedadesTitulo.move_to(UP * 2.3)
+
+        definicao2.next_to(propriedadesTitulo, DOWN, buff=0.35)
+
+        self.play(Write(propriedadesTitulo))
+        self.wait(1)
+
+        self.play(Write(definicao2), run_time=4)
+        self.wait(5)
+
+        propriedade1.next_to(definicao2, DOWN, 0.35).to_edge(LEFT, buff=1)
+
+        self.play(Write(propriedade1))
+        self.wait(5)
+
+        propriedade2.next_to(propriedade1, DOWN, 0.35).align_to(propriedade1, LEFT)
+
+        self.play(Write(propriedade2))
+        self.wait(5)
+
+        propriedade3.next_to(propriedade2, DOWN, 0.35).align_to(propriedade1, LEFT)
+
+        self.play(Write(propriedade3))
+        self.wait(5)
+
+        propriedade4.next_to(propriedade3, DOWN, 0.35).align_to(propriedade1, LEFT)
+
+        self.play(Write(propriedade4))
+        self.wait(5)
+
+        propriedade5.next_to(definicao2, DOWN, buff=0.35).to_edge(RIGHT, buff=1)
+
+        self.play(Write(propriedade5))
+        self.wait(5)
+
+        propriedade6.next_to(propriedade5, DOWN, buff=0.35).align_to(propriedade5, LEFT)
+
+        self.play(Write(propriedade6))
+        self.wait(6)
+
+        propriedade7.next_to(propriedade6, DOWN, buff=0.35).align_to(propriedade5, LEFT)
+
+        self.play(Write(propriedade7))
+        self.wait(5)
+
+        propriedade8.next_to(propriedade7, DOWN, buff=0.35).align_to(propriedade5, LEFT)
+
+        self.play(Write(propriedade8))
+        self.wait(10)
+
+        self.play(
+            FadeOut(propriedadesTitulo),
+            FadeOut(definicao2),
+            FadeOut(propriedade1),
+            FadeOut(propriedade2),
+            FadeOut(propriedade3),
+            FadeOut(propriedade4),
+            FadeOut(propriedade5),
+            FadeOut(propriedade6),
+            FadeOut(propriedade7),
+            FadeOut(propriedade8),
+        )
+
+        self.wait(1)
+
+        exemplo1Titulo = Tex(
+            r"""
+            Exemplo 1
+            """,
+            font_size=38,
+        )
+
+        self.play(Write(exemplo1Titulo))
+        self.wait(2)
+        self.play(FadeOut(exemplo1Titulo))
+
+        exemplo1 = Tex(
+            r"""
+            O conjunto $\mathbb{C}^2$ é um espaço vetorial sobre $\mathbb{R}$. Basta definirmos as operações:
+            """,
+            font_size=32,
+        )
+
+        exemplo1.move_to(UP * 1)
+
+        self.play(Write(exemplo1), run_time=3)
+        self.wait(5)
+
+        exemplo1Adicao = Tex(
+            r"""
+            $\bullet\quad (a, b) + (c, d) = (a + c, \, b + d) \in \mathbb{C}^2, \, \forall \, (a, b), \, (c, d) \in \mathbb{C}^2$.
+            """,
+            font_size=30,
+        )
+
+        exemplo1Adicao.next_to(exemplo1, DOWN, buff=0.35)
+
+        self.play(Write(exemplo1Adicao), run_time=3)
+        self.wait(3)
+
+        exemplo1Produto = Tex(
+            r"""
+            $\bullet\quad \alpha\cdot (a, b) = (\alpha a, \alpha b), \, \alpha \in \mathbb{R}$ e $(a, b) \in \mathbb{C}^2$.
+            """,
+            font_size=30,
+        )
+
+        exemplo1Produto.next_to(exemplo1Adicao, DOWN, buff=0.35).align_to(
+            exemplo1Adicao, LEFT
+        )
+
+        self.play(Write(exemplo1Produto), run_time=3)
+        self.wait(10)
+
+        self.play(FadeOut(exemplo1), FadeOut(exemplo1Adicao), FadeOut(exemplo1Produto))
