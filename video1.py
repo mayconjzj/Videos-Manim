@@ -18,12 +18,9 @@ class SeriesMatematicas(Scene):
             Séries Matemáticas \\
             """,
                 font_size=48,
-<<<<<<< HEAD
             ).set_color_by_gradient(WHITE, BLUE),
             MathTex(r"\sum_{n=1}^{\infty} a_n").set_color_by_gradient(
                 WHITE, BLUE
-=======
->>>>>>> 55e9196ead324d170e66308eef7ecce7524410f9
             ),
             MathTex(r"\sum_{n=1}^{\infty} a_n"),
         ).arrange(DOWN, buff=0.35)
@@ -39,12 +36,9 @@ class SeriesMatematicas(Scene):
             Dada uma sequência de números \\
             reais $(a_n)$
             """
-<<<<<<< HEAD
             ).set_color_by_gradient(WHITE, BLUE),
             MathTex(r"(a_n) = a_1, a_2, a_3, \ldots, a_n").set_color_by_gradient(
                 WHITE, BLUE
-=======
->>>>>>> 55e9196ead324d170e66308eef7ecce7524410f9
             ),
             MathTex(r"(a_n) = a_1, a_2, a_3, \ldots, a_n"),
         ).arrange(DOWN, buff=0.35)
@@ -60,7 +54,6 @@ class SeriesMatematicas(Scene):
             A partir dela formamos uma nova \\
             sequência $(S_n)$ onde
             """
-<<<<<<< HEAD
             ).set_color_by_gradient(WHITE, BLUE),
             VGroup(
                 MathTex(r"S_1 = a_1").set_color_by_gradient(
@@ -75,14 +68,6 @@ class SeriesMatematicas(Scene):
                 MathTex(r"S_n = \sum_{i=1}^n a_i").set_color_by_gradient(
                     WHITE, BLUE
                 ),
-=======
-            ),
-            VGroup(
-                MathTex(r"S_1 = a_1"),
-                MathTex(r"S_2 = a_1 + a_2"),
-                MathTex(r"\vdots"),
-                MathTex(r"S_n = \sum_{i=1}^n a_i"),
->>>>>>> 55e9196ead324d170e66308eef7ecce7524410f9
             ).arrange(DOWN, buff=0.35),
         ).arrange(DOWN, buff=1)
 
@@ -97,21 +82,13 @@ class SeriesMatematicas(Scene):
                 Os números $S_n$ são chamados de \\
                 \textbf{somas parciais} da série $\sum a_n$
                 """
-<<<<<<< HEAD
             ).set_color_by_gradient(WHITE, BLUE),
-=======
-            ),
->>>>>>> 55e9196ead324d170e66308eef7ecce7524410f9
             Tex(
                 r"""
                 A parcela $a_n$ é o n-ésimo termo \\
                 ou termo geral da série.
                 """
-<<<<<<< HEAD
             ).set_color_by_gradient(WHITE, BLUE),
-=======
-            ),
->>>>>>> 55e9196ead324d170e66308eef7ecce7524410f9
         ).arrange(DOWN, buff=0.35)
 
         self.play(Write(texto3), run_time=4)
