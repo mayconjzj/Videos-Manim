@@ -197,6 +197,7 @@ class ConvergenciaFuncoes(Scene):
         titulo_nao_uniforme = Tex("O exemplo $f_n(x)=x^n$ não é uniforme", font_size=36, color=azul)
         titulo_nao_uniforme.to_edge(UP, buff=0.5)
 
+        # O supremo vale 1, mas não é atingido: em x=1, o erro é zero.
         nao_uniforme = VGroup(
             Tex("Para $x<1$, temos $f(x)=0$; em $x=1$, $f(1)=1$.", font_size=27),
             MathTex(r"\sup_{x\in[0,1]}|f_n(x)-f(x)|=1"),
