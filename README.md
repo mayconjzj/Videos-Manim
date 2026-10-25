@@ -8,7 +8,8 @@ Repositório de vídeos e animações matemáticas produzidos com Python e Manim
 Videos-Manim/
 ├── videos/
 │   ├── analise_real/
-│   │   └── series_matematicas.py
+│   │   ├── series_matematicas.py
+│   │   └── convergencia_sequencias_funcoes.py
 │   └── algebra_linear/
 │       └── espacos_vetoriais.py
 ├── .gitignore
@@ -38,6 +39,7 @@ Na raiz do repositório, execute:
 
 ```bash
 manim -pqh videos/analise_real/series_matematicas.py SeriesMatematicas
+manim -pqh videos/analise_real/convergencia_sequencias_funcoes.py ConvergenciaFuncoes
 manim -pqh videos/algebra_linear/espacos_vetoriais.py EspacosVetoriais
 ```
 
