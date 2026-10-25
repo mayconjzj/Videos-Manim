@@ -32,20 +32,33 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
 
       - name: Instalar dependências do sistema
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-science dvisvgm
+          sudo apt-get install -y \
+            ffmpeg \
+            build-essential \
+            pkg-config \
+            libcairo2-dev \
+            libpango1.0-dev \
+            python3-dev \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-science \
+            dvisvgm
 
       - name: Instalar Manim
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools wheel
           python -m pip install manim
+          python -m manim --version
 
       - name: Renderizar vídeo em qualidade alta
         run: |
-          manim -qh --disable_caching videos/analise_real/convergencia_sequencias_funcoes.py ConvergenciaFuncoes
+          python -m manim -qh --disable_caching videos/analise_real/convergencia_sequencias_funcoes.py ConvergenciaFuncoes
 
       - name: Disponibilizar MP4 para download
         uses: actions/upload-artifact@v4
