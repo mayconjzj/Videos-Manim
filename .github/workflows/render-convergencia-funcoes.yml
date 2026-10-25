@@ -1,6 +1,12 @@
 name: Renderizar vídeo Manim
 
 on:
+  push:
+    branches:
+      - feat/convergencia-sequencias-funcoes
+    paths:
+      - 'videos/analise_real/convergencia_sequencias_funcoes.py'
+      - '.github/workflows/render-convergencia-funcoes.yml'
   pull_request:
     branches:
       - main
