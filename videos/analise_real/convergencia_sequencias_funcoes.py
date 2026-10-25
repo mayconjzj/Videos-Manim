@@ -200,7 +200,7 @@ class ConvergenciaFuncoes(Scene):
         nao_uniforme = VGroup(
             Tex("Para $x<1$, temos $f(x)=0$; em $x=1$, $f(1)=1$.", font_size=27),
             MathTex(r"\sup_{x\in[0,1]}|f_n(x)-f(x)|=1"),
-            Tex("O erro máximo em sentido de supremo não diminui com $n$.", font_size=28, color=vermelho),
+            Tex("O supremo do erro não diminui com $n$.", font_size=28, color=vermelho),
             Tex("Logo, a convergência é pontual, mas não uniforme.", font_size=30, color=amarelo),
         ).arrange(DOWN, buff=0.5)
         nao_uniforme.shift(DOWN * 0.2)
