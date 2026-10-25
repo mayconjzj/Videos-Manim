@@ -12,6 +12,9 @@ Videos-Manim/
 │   │   └── convergencia_sequencias_funcoes.py
 │   └── algebra_linear/
 │       └── espacos_vetoriais.py
+├── .github/
+│   └── workflows/
+│       └── render-convergencia-funcoes.yml
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -44,6 +47,8 @@ manim -pqh videos/algebra_linear/espacos_vetoriais.py EspacosVetoriais
 ```
 
 Use `-pqh` para renderização em qualidade alta com pré-visualização. Para renderizar mais rapidamente durante a edição, troque por `-pql`.
+
+O workflow do GitHub Actions também permite renderizar o vídeo de convergência manualmente e baixar o MP4 como artefato. A validação automática da renderização é executada nas pull requests que alteram o código do vídeo ou o próprio workflow.
 
 ## Organização dos arquivos
 
