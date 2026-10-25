@@ -1,6 +1,12 @@
 name: Renderizar vídeo Manim
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'videos/analise_real/convergencia_sequencias_funcoes.py'
+      - '.github/workflows/render-convergencia-funcoes.yml'
   workflow_dispatch:
     inputs:
       ref:
@@ -26,7 +32,7 @@ jobs:
       - name: Baixar o código do vídeo
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.ref || github.event.pull_request.head.ref || github.ref }}
 
       - name: Preparar Python
         uses: actions/setup-python@v5
